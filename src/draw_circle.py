@@ -61,6 +61,8 @@ def draw_circle():
 
     # time.sleep(5)
 
+    rospy.loginfo("<<< STATUS: Moving to Start Position >>>")
+
     joint_1_pub.publish(j1)
     joint_2_pub.publish(j2)
 
@@ -75,8 +77,6 @@ def draw_circle():
         switch.stop_controllers = ['joint_1_position_controller', 'joint_2_position_controller']
         switch.strictness = 2
         
-        # ret = switch_controller(['joint_trajectory_controller'], 
-        #                         ['joint_1_position_controller', 'joint_2_position_controller'], 2)
 
         switch_controller.call(start_controllers=['joint_trajectory_controller'],
                             stop_controllers=['joint_1_position_controller', 'joint_2_position_controller'],
@@ -85,7 +85,7 @@ def draw_circle():
     except rospy.ServiceException, e:
       print "Service call failed: %s"%e
 
-    rospy.loginfo("------------------REACHED HERE----------")
+    
 
     # Create an instance of type JointTrajectory
     traj = JointTrajectory()
@@ -113,11 +113,13 @@ def draw_circle():
         traj.points[i].time_from_start = rospy.Duration.from_sec(i*dt*duration)
         # rospy.loginfo("Status: joint_angles[%f][%f, %f]", i*dt*duration, q[0], q[1])
     
-    
+    rospy.loginfo("<<< STATUS: Circle Drawing Started >>>")
+
     trajectory_pub.publish(traj)
     
     time.sleep(6)
 
+    rospy.loginfo("<<< STATUS: Circle Drawing Complete >>>")
 
 if __name__ == "__main__":
     try:

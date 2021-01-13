@@ -49,7 +49,7 @@
 
     <!-- Save to rosbag -->
      <node pkg="rosbag" type="record" name="rosbag_record"
-       args="-O $(find planar_robot_tutorial)/data/move_robot.bag /data_recorder"/> 
+       args="-O $(find planar_robot_tutorial)/src/move_robot.bag /data_recorder"/> 
 
     <!-- convert joint states to TF transforms for rviz, etc -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"

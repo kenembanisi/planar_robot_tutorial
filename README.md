@@ -2,6 +2,8 @@
 
 This is a tutorial on how to model and simulate a simple 2 DOF planar robot in Gazebo simulator.
 
+![robot_image](Report/robot_image.jpg)
+
 # Setup
 ### Setup ROS workspace
 ```

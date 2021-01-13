@@ -4,7 +4,17 @@ This is a tutorial on how to model and simulate a simple 2 DOF planar robot in G
 
 ![robot_image](Report/robot_image.jpg)
 
+
 # Setup
+
+This repository has been tested in Ubuntu 18.04 and ROS Melodic only. To set up your PC with required software requirements, please following the "Setup your PC" section. If already set up PC, move over to "Setup ROS workspace".
+
+### Setup your PC
+
+* Install [Ubuntu Bionic 18.04](https://releases.ubuntu.com/bionic/) on your PC by following this [guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
+* Install ROS Melodic by following this [guide](http://wiki.ros.org/melodic/Installation/Ubuntu)
+
+
 ### Setup ROS workspace
 ```
 mkdir -p ~/catkin_ws/src

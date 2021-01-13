@@ -41,20 +41,20 @@
     <!-- use joint state publisher -->
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
-    <!-- Run data recorder script -->
-    <!-- <node name="data_recorder" pkg="planar_robot_tutorial" type="data_recorder.py"/> -->
-
     <!-- Run motion script -->
-    <node name="draw_circle" pkg="planar_robot_tutorial" type="draw_circle_2.py"/>
+    <!-- <node name="draw_circle" pkg="planar_robot_tutorial" type="draw_circle_2.py"/> -->
+
+    <!-- Run data recorder script -->
+    <node name="data_recorder" pkg="planar_robot_tutorial" type="data_recorder.py"/>
 
     <!-- Save to rosbag -->
-     <!-- <node pkg="rosbag" type="record" name="rosbag_record"
-       args="-O $(find planar_robot_tutorial)/data/move_robot.bag /data_recorder"/>    -->
+     <node pkg="rosbag" type="record" name="rosbag_record"
+       args="-O $(find planar_robot_tutorial)/data/move_robot.bag /data_recorder"/> 
 
     <!-- convert joint states to TF transforms for rviz, etc -->
-    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
         respawn="false" output="screen" >
         <remap from="/joint_states" to="/planar_robot/joint_states" />
-    </node> -->
+    </node>
 
 </launch>

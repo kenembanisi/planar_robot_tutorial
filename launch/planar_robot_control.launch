@@ -1,7 +1,7 @@
 <launch>
 
     <!-- Settings -->
-    <arg name="pause_sim" value="False" />
+    <arg name="pause_sim" value="True" />
 
     <!-- Set initial configuration of robot -->
     <arg name="joint1" default="1.57"/>

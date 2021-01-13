@@ -10,8 +10,8 @@
     <xacro:property name="effort_limit" value="10" />
     <xacro:property name="velocity_limit" value="100" />
 
-    <xacro:include filename="$(find planar_robot_description)/urdf/materials.xacro" />
-    <xacro:include filename="$(find planar_robot_description)/urdf/planar_robot.gazebo" />
+    <xacro:include filename="$(find planar_robot_tutorial)/urdf/materials.xacro" />
+    <xacro:include filename="$(find planar_robot_tutorial)/urdf/planar_robot.gazebo" />
 
     <!-- World -->
     <link name='world' />

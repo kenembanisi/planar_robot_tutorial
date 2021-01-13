@@ -14,7 +14,7 @@
 
     <!-- Load the robot model to ROS params -->
     <param name="robot_description" 
-        command="$(find xacro)/xacro --inorder '$(find planar_robot_description)/urdf/planar_robot.xacro'" />
+        command="$(find xacro)/xacro --inorder '$(find planar_robot_tutorial)/urdf/planar_robot.xacro'" />
 
     <!-- Spawn the robot model in Gazebo -->
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
@@ -24,7 +24,7 @@
 
 
     <!-- Load the robot controller configuration file -->
-    <rosparam file="$(find planar_robot_description)/config/planar_robot_control.yaml" 
+    <rosparam file="$(find planar_robot_tutorial)/config/planar_robot_control.yaml" 
         command="load" />
 
     <!-- Start the controller -->    
@@ -42,19 +42,19 @@
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
     <!-- Run data recorder script -->
-    <node name="data_recorder" pkg="planar_robot_description" type="data_recorder.py"/>
+    <!-- <node name="data_recorder" pkg="planar_robot_tutorial" type="data_recorder.py"/> -->
 
     <!-- Run motion script -->
-    <node name="draw_circle" pkg="planar_robot_description" type="draw_circle_2.py"/>
+    <node name="draw_circle" pkg="planar_robot_tutorial" type="draw_circle_2.py"/>
 
     <!-- Save to rosbag -->
-     <node pkg="rosbag" type="record" name="rosbag_record"
-       args="-O $(find planar_robot_description)/data/move_robot.bag /data_recorder"/>   
+     <!-- <node pkg="rosbag" type="record" name="rosbag_record"
+       args="-O $(find planar_robot_tutorial)/data/move_robot.bag /data_recorder"/>    -->
 
     <!-- convert joint states to TF transforms for rviz, etc -->
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
         respawn="false" output="screen" >
         <remap from="/joint_states" to="/planar_robot/joint_states" />
-    </node>
+    </node> -->
 
 </launch>

@@ -13,7 +13,7 @@ catkin_init_workspace
 ### Clone the repository
 ```
 cd ~/catkin_ws/src
-https://github.com/kenembanisi/planar_robot_tutorial.git
+git clone https://github.com/kenembanisi/planar_robot_tutorial.git
 ```
 
 ### Install dependencies

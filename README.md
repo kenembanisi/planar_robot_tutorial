@@ -2,18 +2,14 @@
 
 This is a tutorial on how to model and simulate a simple 2 DOF planar robot in Gazebo simulator.
 
-![robot_image](Report/robot_image.jpg)
-
-
 # Setup
+This tutorial has been tested in Ubuntu Bionic (18.04) and ROS Melodic only. To set up your PC with OS requirements, please see below:
 
-This repository has been tested in Ubuntu 18.04 and ROS Melodic only. To set up your PC with required software requirements, please following the "Setup your PC" section. If already set up PC, move over to "Setup ROS workspace".
 
-### Setup your PC
+### Setup Ubuntu & ROS on your PC
 
-* Install [Ubuntu Bionic 18.04](https://releases.ubuntu.com/bionic/) on your PC by following this [guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
-* Install ROS Melodic by following this [guide](http://wiki.ros.org/melodic/Installation/Ubuntu)
-
+* Install **Ubuntu Bionic (18.04)** on the system by following this [guide](https://releases.ubuntu.com/bionic/).
+* Install **ROS Melodic** by following this [guide](http://wiki.ros.org/melodic/Installation/Ubuntu).
 
 ### Setup ROS workspace
 ```
@@ -46,7 +42,7 @@ catkin_make
 Run the following command in one Terminal
 ```
 source ~/catkin_ws/devel/setup.bash
-roslaunch planar_robot_tutorial planar_robot_tutorial.launch
+roslaunch planar_robot_tutorial planar_robot_control.launch
 ```
 
 

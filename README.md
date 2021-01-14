@@ -55,7 +55,8 @@ rosrun planar_robot_tutorial draw_circle.py
 ```
 
 ### Make Plot of Results
-Run the following command in one Terminal
+Run the following command in one Terminal. 
+Ensure you have `Matplotlib` installed.
 ```
 cd ~/catkin_ws/src/planar_robot_tutorial/src
 python bag_to_csv.py; python data_parser.py
